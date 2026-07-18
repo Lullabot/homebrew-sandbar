@@ -5,22 +5,22 @@
 class Sand < Formula
   desc "Headless + TUI manager for Claude Code development VMs (Lima)"
   homepage "https://github.com/lullabot/sandbar"
-  version "0.6.0"
+  version "0.7.0"
 
   depends_on "lima"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Lullabot/sandbar/releases/download/v0.6.0/sandbar_0.6.0_darwin_amd64.tar.gz"
-      sha256 "18e1f32b668f05272c96cb1f50d51451e206944a8852db02a7e36653d4ceda20"
+      url "https://github.com/Lullabot/sandbar/releases/download/v0.7.0/sandbar_0.7.0_darwin_amd64.tar.gz"
+      sha256 "c46dd2ffd2aefe8dc3519bcbe76912054ccae898afb1e6f59ccd81f7051600ec"
 
       define_method(:install) do
         bin.install "sand"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Lullabot/sandbar/releases/download/v0.6.0/sandbar_0.6.0_darwin_arm64.tar.gz"
-      sha256 "ca65e2c81a948f1501aeac7e45f519c3c2135cbec5f9b53e21c328300ec71ac7"
+      url "https://github.com/Lullabot/sandbar/releases/download/v0.7.0/sandbar_0.7.0_darwin_arm64.tar.gz"
+      sha256 "edd6fd478c2ca667ab9493ecdd3687b3bce84420cc4b2137daa8ea9feb36ca21"
 
       define_method(:install) do
         bin.install "sand"
@@ -30,15 +30,15 @@ class Sand < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Lullabot/sandbar/releases/download/v0.6.0/sandbar_0.6.0_linux_amd64.tar.gz"
-      sha256 "a5319db2c869061360c33a65e81f15b18a76c878005507bf4436e92a2c028284"
+      url "https://github.com/Lullabot/sandbar/releases/download/v0.7.0/sandbar_0.7.0_linux_amd64.tar.gz"
+      sha256 "7462685f43fe38a83f3fb5f1147dcb1c6cf8e71402b02bcf5b0112f10e1dcb45"
       define_method(:install) do
         bin.install "sand"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Lullabot/sandbar/releases/download/v0.6.0/sandbar_0.6.0_linux_arm64.tar.gz"
-      sha256 "c63be1d459c6b7d0386e0f245f2fd3ea30f8236f55e500d069d7839a40de05fc"
+      url "https://github.com/Lullabot/sandbar/releases/download/v0.7.0/sandbar_0.7.0_linux_arm64.tar.gz"
+      sha256 "cb1d28de9eddff5b17d9ff57c975166ee3672120b43dc38067785681983a4022"
       define_method(:install) do
         bin.install "sand"
       end
